@@ -217,34 +217,34 @@
 
 
 
-category=[
-    {'cid':1,'name':'laptop'},
-    {'cid':2,'name':'mobile'},
-    {'cid':3,'name':'tv'},
-]
+# category=[
+#     {'cid':1,'name':'laptop'},
+#     {'cid':2,'name':'mobile'},
+#     {'cid':3,'name':'tv'},
+# ]
 
 
-products=[
-    {'pid':1,'cid':1,'name':'dell','price':50000,'qty':10},
-    {'pid':2,'cid':1,'name':'mac','price':90000,'qty':8},
-    {'pid':3,'cid':2,'name':'mi','price':20000,'qty':60},
-    {'pid':4,'cid':3,'name':'sony','price':15000,'qty':30},
+# products=[
+#     {'pid':1,'cid':1,'name':'dell','price':50000,'qty':10},
+#     {'pid':2,'cid':1,'name':'mac','price':90000,'qty':8},
+#     {'pid':3,'cid':2,'name':'mi','price':20000,'qty':60},
+#     {'pid':4,'cid':3,'name':'sony','price':15000,'qty':30},
 
-]
-products_name=0
-quantity=0
-price=0
+# ]
+# products_name=0
+# quantity=0
+# price=0
 
-for i in category:
-    category_name = i['name']
-    print(f"Category: {category_name}")
+# for i in category:
+#     category_name = i['name']
+#     print(f"Category: {category_name}")
     
-    for p in products:
-        if p['cid'] == i['cid']:
-            product_name = p['name']
-            price = p['price']
-            quantity = p['qty']
-            print(f"  - Product: {product_name}, Price: {price}, Quantity: {quantity}")
+#     for p in products:
+#         if p['cid'] == i['cid']:
+#             product_name = p['name']
+#             price = p['price']
+#             quantity = p['qty']
+#             print(f"  - Product: {product_name}, Price: {price}, Quantity: {quantity}")
 
 
 # for i in range(1,6):
@@ -276,13 +276,85 @@ for i in category:
 #     num=int(input('enter the number:'))
 #     number.append(num)
 
-# for num in number:
-#     if number.count(num)>1 and num not in rep:
-#         rep.append(num)
+# # for num in number:
+# #     if number.count(num)>1 and num not in rep:
+# #         rep.append(num)
 
 
-# print(rep)
+# # print(rep)
 
 
 
+# product_list=[
+#     {
+#         "product_id": 1,
+#         "product_name": "Laptop",
+#         "price": 50000,
+#         "quantity": 10
+#     },
+#     {
+#         "product_id": 2,
+#         "product_name": "Mobile",
+#         "price": 20000,
+#         "quantity": 20
+#     },
+#     {
+#         "product_id": 3,
+#         "product_name": "Tablet",
+#         "price": 15000,
+#         "quantity": 15
+#     }
+# ]
+
+# for i in product_list:
+#     id=i['product_id']
+#     print(f'product id:{id}')
+#     name=i['product_name']
+#     print(f'product name:{name}')
+#     pri=i['price']
+#     print(f'price of product:{pri}')
+#     qua=i['quantity']
+#     print(f'avaliable quantity:{qua}')
+#     print()
+
+
+
+# num=int(input('enter the number of different products yo want:'))
+
+# total_price=0
+# cart=[]
+# for _ in range(num):
+#         id = int(input("Enter the Product ID you want to buy: "))
+#         product = None
+#         for p in product_list:
+#             if p['product_id'] == id:
+#                 product = p
+#         qty = int(input(f"Enter quantity of {product['product_name']}: "))
+
+#         if qty > product['quantity']:
+#             print("Not enough stock available.")
+            
+
+#         price = qty * product['price']
+#         product['quantity']= qty
+#         total_price= price
+
+#         cart.append({ "product_id": product['product_id'], 
+#                     "product_name": product['product_name'],
+#                     "quantity": qty,
+#                     "price": price
+#         })
+
+# total_price+=price
+# print("--- Order Summary ---")
+# print("ID\tName\t\tQuantity\tPrice")
+# for item in cart:
+#     print(f"{item['product_id']}\t{item['product_name']}\t\t{item['quantity']}\t\t{item['price']}")
+# print(f"\nTotal Price:{total_price}")
+
+
+# for x in range(1,11):
+#     if x==5 or x==9:
+#         continue
+#     print(x)
 

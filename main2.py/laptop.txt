@@ -1,0 +1,2 @@
+ram,manamaiju,Dell,5,20000,Home delivery,Box,101000
+adad,asd,dell,1,20000
