@@ -10,34 +10,46 @@
 # add,str,rep,
 
 
-class collage:
-    def __init__(self):
-        self.student = ['ram', 'sita', 'hari']
+# class collage:
+#     def __init__(self):
+#         self.student = ['ram', 'sita', 'hari']
 
-    def add(self, new):
-        self.student.append(new)
-        print(f"{new} added.")
+#     def add(self, new):
+#         self.student.append(new)
+#         print(f"{new} added.")
 
-    def show(self):
-        print("Students in the collage:")
-        for s in self.student:
-            print(s)
+#     def show(self):
+#         print("Students in the collage:")
+#         for s in self.student:
+#             print(s)
 
-    def delete(self, name):
-        if name in self.student:
-            self.student.remove(name)
-            print(f"{name} deleted.")
-        else:
-            print(f"{name} not found.")
+#     def delete(self, name):
+#         if name in self.student:
+#             self.student.remove(name)
+#             print(f"{name} deleted.")
+#         else:
+#             print(f"{name} not found.")
 
 
     
 
-c = collage()
-c.show()
+# c = collage()
+# c.show()
 
-c.add("gita")
-c.show()
+# c.add("gita")
+# c.show()
 
-c.delete('ram')
-c.show()
+# c.delete('ram')
+# c.show()
+
+
+# class user:
+#     @staticmethod
+#     def info():
+
+# class phone:
+#     phone=442434244|#it is public
+#     _phone=44243424#it is protected
+#     __phone=44243424#it is private
+
+
