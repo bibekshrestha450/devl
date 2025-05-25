@@ -48,45 +48,44 @@
 # mybd.close()
 
 
-# import sqlite3
+import sqlite3
 
-# conn = sqlite3.connect("data base/product.sqlite3") 
-# cursor = conn.cursor()
+conn = sqlite3.connect("data base/product.sqlite3") 
+cursor = conn.cursor()
 
-# def create_product():
-#     sql = """
-#         CREATE TABLE IF NOT EXISTS product (
-#             id INTEGER PRIMARY KEY AUTOINCREMENT,
-#             user TEXT NOT NULL,
-#             news TEXT NOT NULL UNIQUE,
-#             product TEXT
-#         )
-#     """
-#     cursor.execute(sql)
-#     conn.commit()
+def create_product():
+    sql = """
+        CREATE TABLE IF NOT EXISTS product (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user TEXT NOT NULL,
+            news TEXT NOT NULL UNIQUE,
+            product TEXT
+        )
+    """
+    cursor.execute(sql)
+    conn.commit()
 
-# create_product()
+create_product()
 
-# def insert(user, news, product):
-#     sql = """
-#         INSERT INTO product (user, news, product)
-#         VALUES (?, ?, ?)
-#     """
-#     try:
-#         cursor.execute(sql, (user, news, product))
-#         conn.commit()
-#         print("Data inserted successfully")
-#     except sqlite3.IntegrityError as e:
-#         print("Error inserting data:", e)
+def insert(user, news, product):
+    sql = """
+        INSERT INTO product (user, news, product)
+        VALUES (?, ?, ?)
+    """
+    try:
+        cursor.execute(sql, (user, news, product))
+        conn.commit()
+        print("Data inserted successfully")
+    except sqlite3.IntegrityError as e:
+        print("Error inserting data:", e)
 
-# # User input
-# user = input("Enter your user name: ")
-# news = input("Enter news: ")
-# product = input("Enter the product name: ")
+user = input("Enter your user name: ")
+news = input("Enter news: ")
+product = input("Enter the product name: ")
 
-# insert(user, news, product)
+insert(user, news, product)
 
-# cursor.close()
-# conn.close()
+cursor.close()
+conn.close()
 
 
