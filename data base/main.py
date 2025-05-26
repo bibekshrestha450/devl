@@ -47,6 +47,77 @@
 # cursor.close()
 # mybd.close()
 
+# import sqlite3
+
+# conn = sqlite3.connect("database/college.sqlite3")
+# mycur =conn.cursor()
+# def create_table():
+#     sql="""
+#         CREATE TABLE IF NOT EXISTS students (
+#             id INTEGER PRIMARY KEY AUTOINCREMENT,
+#             name TEXT NOT NULL,
+#             email TEXT NOT NULL UNIQUE,
+#             address TEXT
+#         )
+#     """
+#     mycur.execute(sql)
+# create_table()
+
+# def select():
+#     sql=""" SELECT * FROM students """
+#     data = mycur.execute(sql)
+#     print(data.fetchall())
+
+
+# def insert(name,email,address):
+#     sql="""
+#         INSERT INTO students (name, email, address)
+#         VALUES (?, ?, ?)
+#         """
+#     mycur.execute(sql, (name, email, address))
+#     conn.commit()
+#     print("Data inserted successfully.")
+
+
+# def update(name,email,address,id):
+#     sql="""
+#         UPDATE students SET name = ?, email = ?, address = ? WHERE id = ?
+#         """
+#     mycur.execute(sql, (name, email, address, id))
+#     conn.commit()
+#     print("Data Update successfully.")
+
+
+# def delete(id):
+#     sql="""
+#         DELETE FROM students WHERE id = ?
+#         """
+#     mycur.execute(sql, (id,))
+#     conn.commit()
+#     print("Data Deleted successfully.")
+
+
+
+# print("1. Insert Data 2. View Data 3. Update Data 4. Delete Data")
+# option=int(input("Enter option: "))
+# if option ==1:   
+#     name = input("Enter name: ")
+#     email = input("Enter email: ")
+#     address = input("Enter address: ")
+#     insert(name, email, address)
+# elif option == 2:
+#     select()
+# elif option == 3:
+#     name = input("Enter name: ")
+#     email = input("Enter email: ")
+#     address = input("Enter address: ")
+#     id = input("Enter id: ")
+#     update(name, email, address, id)
+# elif option == 4:
+#     id = input("Enter id: ")
+#     delete(id)
+# else:
+#     print("Invalid option selected.")
 
 import sqlite3
 
